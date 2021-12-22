@@ -41,6 +41,7 @@ class HomeFragment : Fragment() {
     }
 
     private suspend fun playAnimation() {
+        binding.generateButton.isClickable = false
         binding.titleTextView.animate().alpha(0f).duration = 400L
         binding.generateButton.animate().alpha(0f).duration = 400L
         binding.textInputLayout.animate().alpha(0f).duration = 400L
@@ -56,8 +57,8 @@ class HomeFragment : Fragment() {
         findNavController().navigate(R.id.action_homeFragment_to_successFragment)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 }
