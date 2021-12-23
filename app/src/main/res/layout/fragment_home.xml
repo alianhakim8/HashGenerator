@@ -41,10 +41,10 @@
             android:id="@+id/auto_complete_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/select_algoritm"
             android:inputType="none"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
+            android:text="SHA-256"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
