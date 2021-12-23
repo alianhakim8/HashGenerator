@@ -1,6 +1,7 @@
 package id.alian.hashgenerator
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
@@ -27,10 +28,6 @@ class HomeFragment : Fragment() {
 
         viewModel = (activity as MainActivity).viewModel
 
-        viewModel.message.observe(this, {
-            showSnackBar(it)
-        })
-
         onGenerateClicked()
         return binding.root
     }
@@ -38,12 +35,11 @@ class HomeFragment : Fragment() {
     private fun onGenerateClicked() {
         binding.generateButton.setOnClickListener {
             if (binding.plainText.text.toString().trim().isEmpty()) {
-                showSnackBar("cannot be empty")
+                showSnackBar("Field empty")
             } else {
                 lifecycleScope.launch {
                     playAnimation()
-                    getHashData()
-                    navigateToSuccess()
+                    navigateToSuccess(getHashData())
                 }
             }
         }
@@ -62,8 +58,9 @@ class HomeFragment : Fragment() {
         delay(1500L)
     }
 
-    private fun navigateToSuccess() {
-        findNavController().navigate(R.id.action_homeFragment_to_successFragment)
+    private fun navigateToSuccess(hash: String) {
+        val directions = HomeFragmentDirections.actionHomeFragmentToSuccessFragment(hash)
+        findNavController().navigate(directions)
     }
 
     private fun getHashData(): String {
