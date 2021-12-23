@@ -82,12 +82,20 @@ class HomeFragment : Fragment() {
         inflater.inflate(R.menu.home_menu, menu)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.clear_menu) {
+            binding.plainText.text.clear()
+            showSnackBar("cleared.")
+            return true
+        }
+        return true
+    }
+
     override fun onResume() {
         super.onResume()
         val hashAlgorithms = resources.getStringArray(R.array.hash_algorithms)
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item, hashAlgorithms)
         binding.autoCompleteTextView.setAdapter(arrayAdapter)
-        binding.plainText.text.clear()
     }
 
     override fun onDestroyView() {
