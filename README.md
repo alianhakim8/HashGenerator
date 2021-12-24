@@ -43,4 +43,4 @@ This project is mantained by:
 6. Create a new Pull Request
 
 # Screenshot App
-- comming soon
+- coming soon
