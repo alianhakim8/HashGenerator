@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_HashGenerator)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

@@ -34,6 +34,7 @@
         android:paddingStart="100dp"
         android:paddingEnd="100dp"
         android:text="@string/copy_to_clipboard"
+        android:textAllCaps="false"
         app:icon="@drawable/ic_copy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
