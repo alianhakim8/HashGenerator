@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.google.android.material.color.DynamicColors
 import id.alian.hashgenerator.databinding.ActivityMainBinding
 import id.alian.hashgenerator.viewmodel.HashViewModel
 import id.alian.hashgenerator.viewmodel.HashViewModelFactory
