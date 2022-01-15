@@ -7,7 +7,7 @@ Simple application for generate hash from plain text using some algorithm.
 ## Installation
 Clone this repository and import into **Android Studio**
 ```bash
-git clone git@github.com:wolox/HashGenerator.git
+git@github.com:alianhakim8/HashGenerator.git
 ```
 
 ## Configuration
