@@ -1,6 +1,8 @@
 # Hash Generator App
 
-Application to generate hash from plain text.
+Simple application for generate hash from plain text using some algorithm.
+
+# Preview
 
 ## Installation
 Clone this repository and import into **Android Studio**
@@ -42,5 +44,3 @@ This project is mantained by:
 5. Push your branch (git push origin my-new-feature)
 6. Create a new Pull Request
 
-# Screenshot App
-- coming soon
